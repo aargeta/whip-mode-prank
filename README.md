@@ -23,6 +23,7 @@ Runs on Windows via [AutoHotkey v2](https://www.autohotkey.com/) — free, tiny,
 
    If you only have `whip.ahk` and `make_assets.py`, run:
    ```
+   pip install pillow
    python make_assets.py
    ```
    to generate `whipcrack.wav` and `whip.cur` in the same folder.
@@ -30,6 +31,9 @@ Runs on Windows via [AutoHotkey v2](https://www.autohotkey.com/) — free, tiny,
 3. Double-click `whip.ahk` to run it (or right-click → Run Script).
 
 4. Press **Ctrl+Alt+W**. Enjoy.
+
+5. **To turn it off:** right-click the green AutoHotkey icon in the system
+   tray → Exit (or Suspend Hotkeys to pause without closing).
 
 ## Run it automatically on login (optional)
 

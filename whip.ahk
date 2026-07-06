@@ -12,6 +12,10 @@ OCR_IDS := [32512, 32513, 32514, 32515, 32516, 32643, 32644, 32645, 32646,
 
 restoreTimer := 0
 
+; Safety net: if the script exits (tray → Exit, or a crash) mid-whip, the
+; system cursors would otherwise stay stuck on the whip icon forever.
+OnExit((*) => RestoreCursors())
+
 ; Created once at script load and kept alive as a global — a local COM object
 ; released right after an async Speak() call gets torn down mid-playback, which
 ; is why the voice line was cutting out silently.
